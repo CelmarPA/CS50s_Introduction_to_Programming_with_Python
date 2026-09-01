@@ -1,0 +1,16 @@
+    if json_response:
+        print("\n### Response successfully received! ###")
+        print(f"Offers {len(json_response["data"]["offers"])}")
+
+        print(f"Five first offers:")
+
+        for i in range(5):
+            print(f"Offer number {i + 1}:"
+                  f"\n${json_response["data"]["offers"][i]["total_amount"]}"
+                  f"\nCompany: {json_response["data"]["offers"][i]["owner"]["name"]}\n")
+
+        with open("respose.txt", "w") as file:
+            file.writelines(json.dumps(json_response,  indent=2))
+
+    else:
+        print("\nIt was not possible to retrieve the offers.")
