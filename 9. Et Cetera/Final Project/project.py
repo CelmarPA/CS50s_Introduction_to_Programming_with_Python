@@ -65,7 +65,7 @@ def config_environment() -> None:
 def get_access_token() -> str:
     """Return the Duffel API access token."""
 
-    return os.getenv('DUFFEL_ACCESS_TOKEN', "duffel_test_LvE7im5LBtqEKD9a82_UL8uQumx5aC-Kxaa3lVfGAiD")
+    return os.getenv('DUFFEL_ACCESS_TOKEN', "")
 
 
 def search_flight_offers(
