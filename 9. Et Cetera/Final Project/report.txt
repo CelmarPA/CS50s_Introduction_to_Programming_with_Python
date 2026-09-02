@@ -1,63 +1,48 @@
 FLIGHT PRICES REPORT
 ====================
 
-Belo Horizonte → Okinawa
-Airline: Duffel Airways
-Price: $1363.95
+Belo Horizonte → Fussa
+Airline: British Airways
+Price: $984.99
 
 Outbound:
-2026-09-02T00:46:00 → 2026-09-03T14:33:00
-
-Return:
-2026-09-09T06:11:00 → 2026-09-09T19:58:00
-
---------------------
-
-Belo Horizonte → Nagoya
-Airline: Duffel Airways
-Price: $1293.12
-
-Outbound:
-2026-09-02T00:46:00 → 2026-09-03T13:48:00
-
-Return:
-2026-09-09T06:11:00 → 2026-09-09T19:13:00
-
---------------------
-
-Belo Horizonte → Tokyo
-Airline: Iberia
-Price: $1246.54
-
-Outbound:
-2026-09-02T00:46:00 → 2026-09-03T13:36:00
-
-Return:
-2026-09-09T06:11:00 → 2026-09-09T19:03:00
+2026-11-01T00:00:00 → 2026-11-02T12:50:00
 
 --------------------
 
 Belo Horizonte → Osaka
 Airline: Duffel Airways
-Price: $1282.54
+Price: $1063.89
 
 Outbound:
-2026-09-02T00:46:00 → 2026-09-03T13:49:00
-
-Return:
-2026-09-09T06:11:00 → 2026-09-09T19:17:00
+2026-11-01T00:00:00 → 2026-11-02T13:04:00
 
 --------------------
 
 Belo Horizonte → Sapporo
 Airline: Duffel Airways
-Price: $1282.81
+Price: $943.23
 
 Outbound:
-2026-09-02T00:46:00 → 2026-09-03T12:31:00
+2026-11-01T00:00:00 → 2026-11-02T11:46:00
 
-Return:
-2026-09-09T06:11:00 → 2026-09-09T17:56:00
+--------------------
+
+Belo Horizonte → Nagoya
+Airline: Duffel Airways
+Price: $998.68
+
+Outbound:
+2026-11-01T00:00:00 → 2026-11-02T13:00:00
+
+--------------------
+
+Belo Horizonte → Okinawa
+Airline: Duffel Airways
+Price: $1062.00
+
+Outbound:
+2026-11-01T00:00:00 → 2026-11-02T13:46:00
 
 --------------------
 
