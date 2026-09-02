@@ -87,7 +87,7 @@ cheapest_flights = [
 
 
 def test_get_cheapest_flight():
-    result = get_cheapest_flight(flights, return_data=True)
+    result = get_cheapest_flight(flights, round_flight=True)
 
     assert result["price"] == "400.00"
     assert result["airline"] == "Airline B"

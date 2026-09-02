@@ -18,14 +18,20 @@ def main() -> None:
     passenger_age: int = flight_data["passenger_age"]
     cabin_class: str = flight_data["cabin_class"]
 
+    round_flight: bool = True
+
     print("\nSearching for city codes...")
     origins = get_city_code(origin)
     destinations = get_city_code(destination)
+
 
     if origins is None or destinations is None:
         return
 
     print("\nStarting flight search...")
+
+    if not return_date:
+        round_flight = False
 
     flights = search_flights(
         origins,
@@ -41,7 +47,7 @@ def main() -> None:
     for flight in flights:
         cheapest = get_cheapest_flight(
             flight["offers"],
-            return_data=True
+            round_flight=round_flight
         )
 
         cheapest_flights.append(cheapest)
@@ -164,7 +170,7 @@ def search_flights(
 
 def get_cheapest_flight(
     flights: list[dict],
-    return_data: bool = False
+    round_flight: bool = False
 ) -> dict:
     """Return the cheapest flight from a list of flight offers."""
 
@@ -181,7 +187,7 @@ def get_cheapest_flight(
         }
     }
 
-    if return_data:
+    if round_flight:
         cheapest_flight["return"] = {
             "origin": cheapest["slices"][1]["segments"][0]["origin"]["city_name"],
             "destination": cheapest["slices"][1]["segments"][0]["destination"]["city_name"],
@@ -238,9 +244,10 @@ def generate_report(flights: list[dict]) -> str:
         report += f'{flight["outbound"]["departure"]} → '
         report += f'{flight["outbound"]["arrival"]}\n\n'
 
-        report += "Return:\n"
-        report += f'{flight["return"]["departure"]} → '
-        report += f'{flight["return"]["arrival"]}\n\n'
+        if "return" in flight:
+            report += "Return:\n"
+            report += f'{flight["return"]["departure"]} → '
+            report += f'{flight["return"]["arrival"]}\n\n'
 
         report += "--------------------\n\n"
 
